@@ -1,0 +1,13 @@
+a#go-top{
+    background:#E6E6E6;
+    width:50px;
+    height:25px;
+    text-align:center;
+    text-decoration:none;
+    line-height:25px;
+    color:#999;
+}
+a#go-top:hover{
+    background:#CCC;
+    color:#333;
+}

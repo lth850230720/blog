@@ -1,0 +1,36 @@
+{% extends 'base_head.html' %}
+{% load static from staticfiles %}
+{% block style %}
+	.tag_ul>li{
+		margin:3px;
+		margin-left:10px;
+	}
+
+{% endblock %}
+{% block main %}
+	<div class="container" style="">
+		<p class="page-header col-lg-12  col-md-12 col-sm-12"
+		   style="border-bottom:2px dashed #DCDCDC;font-size:x-large;margin-top: 70px;">Tag&标签</p>
+		<div style="margin-top: 200px;">
+			<h2 class="col-lg-4 col-lg-offset-4 col-md-5 col-md-offset-4 col-sm-9 col-sm-offset-3 col-xs-12 col-xs-offset-2" style="">目前总计有{{ tag_count }}个标签</h2>
+			<div>
+				<ul class="tag_ul list-inline col-lg-7 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 " style="">
+				{% for tag_key,tag_value in tag_html.items %}
+				<li class="" style=""><a style="display: block;text-decoration:none;" href="/tag/{{ tag_key }}/1"><h3><span class="label label-default" style="background-color: #24527d">{{ tag_key }}  <span class="badge" style="background-color: #1b6d85">{{ tag_value }}</span></span></h3></a></li>
+			{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script type="text/javascript">
+		{#	var tag_name={{ tag_html.keys }}#}
+		{#	var tag_count={{ tag_html.values }}#}
+		{#	alert(tag_name)#}
+{#		var tag_count = {{ tag_html.values }}#}
+{#				alert(tag_count)#}
+
+	</script>
+{% endblock %}

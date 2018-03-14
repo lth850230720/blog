@@ -1,0 +1,23 @@
+{% extends 'base_head.html' %}
+
+{% load static from staticfiles %}
+{% block style %}
+	.blog_div{
+		font-size:20px
+	}
+	div{
+
+	}
+{% endblock %}
+{% block main %}
+<div class="container" style="">
+	<p class="col-lg-offset-5 col-md-offset-5 col-sm-offset-5" style="margin-top:50px;margin-bottom: 25px;font-size: xx-large;">{{ blog.blog_title }}</p>
+	<div class="col-lg-offset-2 col-md-offset-1" style="margin-bottom: 35px;color: #9c9c9c;">
+	<span><i class="glyphicon glyphicon-calendar"></i>发表于:{{ blog.created_time }}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><i
+							class="glyphicon glyphicon-calendar"></i>修改:{{ blog.modified_time }}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<span><i class="glyphicon glyphicon-folder-open"></i>分类:{{ blog.category }}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><i
+							class="glyphicon glyphicon-tag" style=""></i>{{ blog.tags }}</span>
+	</div>
+	<div class="blog_div col-lg-12 col-md-12" style="color: #9c9c9c;">{{ blog.blog_body }}</div>
+{% endblock %}
+</div>

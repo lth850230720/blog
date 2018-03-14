@@ -1,0 +1,125 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+	<title>myblog</title>
+	<script src="{% static 'js/jquery-3.3.1.js' %}" type="text/javascript"></script>
+	{#	<script src="{% static 'js/canvas.js' %}"></script>#}
+	<script src="{% static 'js/bootstrap.min.js' %}" type="text/javascript"></script>
+	<link href="{% static 'css/return-top.css' %}" rel="stylesheet">
+
+	<script src="{% static 'js/go-top.js' %}" type="text/javascript"></script>
+
+	<style type="text/css">
+		.navbar {
+			padding-top: 15px;
+			padding-bottom: 15px;
+			margin-bottom: 0px;
+		}
+
+		i {
+			margin-top: 0px;
+			margin-right: 12px;
+		}
+
+		html, body {
+			height: 100%;
+			background-color: #efefef;
+		}
+
+		{% block style %}
+		{% endblock %}
+
+		#go-top {
+			position: fixed;
+			_position: absolute;
+			z-index: 1000;
+			background: #eee;
+			bottom: 30px;
+			right: 30px;
+			_right: 17px;
+			height: 25px;
+			background: black;
+			width: 25px;
+		}
+		#go-right{
+			position: fixed;
+			_position: absolute;
+			z-index: 1000;
+			background: #eee;
+			bottom: 58px;
+			right: 30px;
+			_right: 17px;
+			height: 25px;
+			background: black;
+			width: 25px;
+		}
+	</style>
+</head>
+<body>
+<nav class="navbar navbar-inverse  " style="">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header" style="">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+			        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#" style="font-size: 20px">SnakeCoding</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="">
+			<ul class="nav navbar-nav" style="">
+
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li style=""><a style="" href="/index"><i class="glyphicon glyphicon-home" style=""></i>首页</a></li>
+				<li style=""><a style="" href="/about"><i class="glyphicon glyphicon-user" style=""></i>关于</a></li>
+				<li style=""><a style="" href="/divide"><i class="glyphicon glyphicon-th" style=""></i>分类</a></li>
+				<li style=""><a style="" href="/tag"><i class="glyphicon glyphicon-tag" style=""></i>标签</a></li>
+				<li style=""><a style="" href="/resume"><i class="glyphicon glyphicon-list-alt" style=""></i>个人简历</a>
+				</li>
+				<li style=""><a style="" href="/search"><i class="glyphicon glyphicon-search" style=""></i>搜索</a></li>
+				{#				<li style=""><a style="" href="/search"><i class="glyphicon glyphicon-search" style=""></i>搜索</a></li>#}
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</div><!-- /.container-fluid -->
+</nav>
+<div id="go-right"><a><i class="glyphicon glyphicon-arrow-up" style="text-align: center;font-size: 23px;color: #eeeeee"></i></a></div>
+<div id="go-top"><a><i class="glyphicon glyphicon-arrow-up" style="text-align: center;font-size: 23px;color: #eeeeee"></i></a></div>
+<div id="SOHUCS" ></div>
+
+</body>
+
+<script>
+	/* <![CDATA[ */
+
+
+$(document).ready(function() {
+        $('#go-top').click(function(){
+            $('html, body').animate({scrollTop:0}, 120);
+        });
+	$backToTopFun = function() {
+  var st = $(document).scrollTop(), winh = $(window).height();
+  (st > 300)? $('#go-top').show():  $('#go-top').hide();
+  //IE6下的定位
+ };
+ $(window).bind("scroll", $backToTopFun);
+    });
+
+</script>
+{% block main %}
+{% endblock %}
+
+{#{% block body %}#}
+{#	heheh#}
+{#{% endblock %}#}
+
+</html>

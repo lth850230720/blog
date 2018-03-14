@@ -1,0 +1,87 @@
+{% extends 'base_head.html' %}
+{% load static from staticfiles %}
+{% block style %}
+	.about>li{
+		margin-top:8px;
+		font-size: larger;
+	}
+	.about >li>a{
+		color:black;
+		font-size:large;
+	}
+	p{
+		text-align:justify;
+	}
+{% endblock %}
+{% block main %}
+	<blockquote class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1"
+	            style="border-top:2px dashed #DCDCDC;border-bottom:2px dashed #DCDCDC;margin-top: 30px">
+		<p class="col-lg-offset-1">君子食无求饱，居无求安，敏于事而慎于言，就有道而正焉，可谓好学也已</p>
+		<footer class="blockquote-reverse"><cite title="Source Title">《论语·学而》</cite></footer>
+	</blockquote>
+	<div class="container" >
+		<h1 class="page-header col-lg-10 col-lg-offset-1 col-md-12  col-sm-12"
+		    style="border-bottom:2px dashed #DCDCDC;font-size:x-large">勉励</h1>
+		<p class="col-lg-7 col-lg-offset-2 col-md-7 col-md-offset-2 col-sm-12" style="font-size: larger;">
+			在过去的二十年里，冲动过，迷茫过，坚持过，放弃过，失败过，成功过；已化作以往的回忆，在内心深处缅怀。
+			20-30岁的十年时间里面，是我们最重要的10年时间，它将奠定我们未来甚至下一代的基础，十年时间说长不长，说短不短，
+			但是我们需要在这十年里，明确自己未来的方向，为将来打下基础。同样这十年，也将遇到各种各样的困难、怀疑、痛苦、失落，
+			但是现在我仍需要告诉自己你需要做些什么，放下些什么，努力去做，尽最大的努力去做。
+			“Man proposes, God disposes”
+		</p>
+		<h1 class="page-header col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12"
+		    style="border-bottom:2px dashed #DCDCDC;font-size:x-large">关于我</h1>
+		<p class=" col-lg-7 col-lg-offset-2 col-md-7 col-md-offset-2 col-sm-12 " style="font-size: large;">
+			介绍自己从来都不是意见容易的事情，就好像那个哲学问题一样，“我是谁，我从哪来，我要到哪去”；
+			所以在这里我姑且称自己为简简单单的求学者，简单的用一些标签来介绍下自己：
+		</p>
+		<p class=" col-lg-7 col-lg-offset-2 col-md-7 col-md-offset-2 col-sm-12 " style="font-size: larger;border-left: 4px solid #bfbfbf;">
+			95后，程序猿，物联网工程，开源，音乐，电影，科幻，小说，爱宠物，电子设备，简单，热爱生活
+		</p>
+		<h1 class="page-header col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12"
+		    style="border-bottom:2px dashed #DCDCDC;font-size:x-large">联系我</h1>
+		<ul class="about col-lg-7 col-lg-offset-2 col-md-7 col-md-offset-2 col-sm-12">
+		<li style="font-size:large"><span class="col-lg-3 col-md-6 col-sm-6 col-xs-6"><strong >邮箱：</strong></span> <span class=" col-lg-2 col-md-4 col-sm-4"style="font-size:large">850230720@qq.com</span></li>
+		<li style="font-size:large"><span class="col-lg-3 col-md-6 col-sm-6 col-xs-6"><strong >QQ：</strong></span> <span class="col-lg-2 col-md-4 col-sm-4 "style="font-size:large">850230720</span></li>
+		<li style="font-size:large"><span class="col-lg-3 col-md-6 col-sm-6 col-xs-6"><strong >微信：</strong></span> <span class="col-lg-2 col-md-4 col-sm-4 "style="font-size:large">luo850230720</span></li>
+		<li style="font-size:large"><span class="col-lg-3 col-md-6 6col-sm-6 col-xs-6"><strong>个人简历:</strong></span><span class=" col-lg-2 col-md-4 col-sm-4"> <a href="/resume"  rel="external col-xs-4" style="color: black"><strong style="font-size:large">戳我</strong></a></span></li>
+	</ul>
+		<h1 class="page-header col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12"
+		    style="border-bottom:2px dashed #DCDCDC;font-size:x-large">2018技能树</h1>
+		<ul class="about col-lg-7 col-lg-offset-2 col-md-7 col-md-offset-2 col-sm-12">
+			<li><del>学习 django</del></li>
+			<li><del>学习 tornado</del></li>
+			<li><del>强化学习 oracle</del></li>
+			<li>强化学习 复杂shell</li>
+			<li>复习 java</li>
+			<li>学习 vue.js</li>
+			<li>学习 react.js</li>
+			<li>学习 Layui 前端UI框架(国产)</li>
+			<li>学习 Zookeeper 中间件</li>
+			<li>深入学习 Redis 分布式缓存</li>
+			<li>学习 ActiveMQ,RabbitMQ,Kafka,RocketMQ 等任意消息中间件</li>
+		</ul>
+	<h1 class="page-header col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1"
+		    style="border-bottom:2px dashed #DCDCDC;font-size:x-large">学习之外的计划</h1>
+	<ul class=" about col-lg-7 col-lg-offset-2 col-md-7 col-md-offset-2 col-sm-12">
+		<li>坚持每天锻炼身体</li>
+		<li>坚持每天抽出30-60分钟时间看计算机无关的书</li>
+		<li>坚持每天背20个单词</li>
+	</ul>
+	</div>
+	{#		<div class='map'style="background: url({% static 'img/cxy.png' %}) no-repeat;height: 100%;width:100%;margin-top: 0px"></div>#}
+
+	{#		<div class="introduce">#}
+	{#			<img src="{% static 'img/123.jpg' %}" alt="..." class="img-circle  col-lg-offset-5 col-md-offset-5 col-sm-offset-5 col-xs-offset-5">#}
+	{#			<p class="h3"><h3>30岁到30岁这十年间，可能是我们最重要的十年，你要确定自己的世界观、价值观，选择一个合适的人生伴侣，慢慢定下来，可是这其间充满了挫折、怀疑和困惑。#}
+	{#大学毕业之前，你可能和我一样，充满了各种千奇百怪的想法和想要去闯荡的心，可结果总是混混当当，想做的事情只是停留在了“想”的层面上，并没有什么结果，如今我已开始步入社会，好多事情还没有来得及做，好多想法也早已泯灭，我不要再过这样子的生活，我想改变，成为更好的自己！#}
+	{##}
+	{#		</div>#}
+
+
+
+	{#	<div style="position: inherit;top: 50%;opacity: 1;filter:alpha(opacity=100);background-color: #1b6d85;height: 40%;width: 100%;float: left;"></div>#}
+	{#	<div style="position: fixed;top: 33%;opacity: 1;filter:alpha(opacity=100);background-color: #1b6d85;height: 40%;width: 100%;float: left;"></div>#}
+	{#	<div class='map'style="background-image: url({% static 'img/123.jpg' %});height: 100%;width:100%;margin-top: 0px"></div>#}
+	{#	<div class='map'style="background-color: #273c7d;height: 100%;width:100%;margin-top: 0px"></div>#}
+{% endblock %}

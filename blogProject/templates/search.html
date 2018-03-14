@@ -1,0 +1,31 @@
+{% extends 'base_head.html' %}
+{% load static from staticfiles %}
+
+{% block style %}
+	.tag_div{
+	margin:5px;
+	}
+	span{
+	color:#989898;
+	text-align:justify;
+	font-size:smaller;
+	}
+	.tag_blog>i{
+	margin:10px;
+	}
+
+{% endblock %}
+
+{% block main %}
+	<div class="container tag_blog" style="">
+		<p class="page-header col-lg-12  col-md-12 col-sm-12"
+		   style="border-bottom:2px dashed #DCDCDC;font-size:x-large;margin-top: 70px;margin-bottom: 50px"><i
+				class="glyphicon glyphicon-search" style=""></i>搜索</p>
+			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
+				<h3 class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">&nbsp;&nbsp;&nbsp;主人正在努力完善中.....</h3>
+				<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12" style="height: 250px;background-size:100% 100%;-moz-background-size:100% 100%;background-repeat:repeat;background-image: url({% static 'img/kowtow.jpg' %})"></div>
+			</div>
+	</div>
+	<script type="text/javascript">
+	</script>
+{% endblock %}

@@ -1,0 +1,109 @@
+{% extends 'base_head.html' %}
+{% load static from staticfiles %}
+<link href="{% static 'css/3d-tag.css' %}" rel="stylesheet">
+{% block style %}
+	.tag_div{
+	margin:5px;
+	}
+	span{
+	color:#989898;
+	text-align:justify;
+	font-size:smaller;
+	}
+	.tag_blog>i{
+	margin:10px;
+	}
+
+	#tagCloud>#rotate {
+	height: 400px;
+	width: 450px;
+	position: relative;
+	margin: 10px auto;
+	}
+
+	#tagCloud>#rotate a {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	color: #fff;
+	font-weight: bold;
+	padding: 3px 6px;
+	font-size: 14px;
+	}
+
+	#tagCloud>#rotate a:hover {
+	border: 1px solid #eee;
+	background: #9c9c9c;
+	border-radius: 5px;
+	}
+{% endblock %}
+
+{% block main %}
+	<div id="tagCloud" class="col-lg-2 col-lg-offset-9 col-md-3 col-md-offset-9 col-sm-0 col-xs-0"style="height:220px;background-color: red;position: absolute;top: 120px;right: 0px">
+		<script type="text/javascript">
+			if (window.screen.Width < 1024) {
+				alert('asd')
+				document.getElementById('tagCloud').style.display = 'none';
+			}
+		</script>
+	</div>
+	<div class="container tag_blog" style="">
+		<p class="page-header col-lg-12  col-md-12 col-sm-12"
+		   style="border-bottom:2px dashed #DCDCDC;font-size:x-large;margin-top: 70px;margin-bottom: 50px"><i
+				class="glyphicon glyphicon-folder-open" style=""></i>全站总计有{{ item_count|default:'0' }}篇相关博文</p>
+		{% if item_count > 0 %}
+			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
+				{% for blog in blogList %}
+					<div class="tag_div col-lg-12 col-md-12 col-sm-12 "
+					     style="">
+						<h2>{{ blog.blog_title }}</h2>
+						<span><i class="glyphicon glyphicon-calendar"></i>发表于:{{ blog.created_time }}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><i
+							class="glyphicon glyphicon-calendar"></i>修改:{{ blog.modified_time }}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<span><i class="glyphicon glyphicon-folder-open"></i>分类:{{ blog.category }}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><i
+							class="glyphicon glyphicon-tag" style=""></i>{{ blog.tags }}</span>
+						<h3 class="col-lg-12 col-md-12 col-sm-12" style="color:#9c9c9c;text-align:justify;">
+							<p>{{ blog.blog_body }}</p></h3>
+						<h3><a href="/blog/{{ blog.pk }}"
+						       style="color:#9c9c9c;font-family: Consolas;font-size: large"><strong>阅读全文</strong></a>
+						</h3>
+
+					</div>
+				{% endfor %}
+				{#				<ul>#}
+				{#					{% for index in blogList.paginator.page_range %}#}
+				{#						<li>#}
+				{#							<a href="{{ index }}">{{ index }}</a>#}
+				{#						</li>#}
+				{#					{% endfor %}#}
+				{#				</ul>#}
+
+				<nav style="margin-left: 0px; ">
+					<ul class="pager">
+						{% if blogList.has_previous %}
+							<li class="previous"><a href="/index/{{ blogList.previous_page_number }}"><span
+									aria-hidden="true">&larr;</span>向前</a></li>
+						{% else %}
+							<li class="previous disabled"><a
+							><span
+									aria-hidden="true">&larr;</span>向前</a></li>
+						{% endif %}
+						<li>{{ blogList.number }}/{{ blogList.paginator.num_pages }}</li>
+						{% if blogList.has_next %}
+							<li class="next"><a href="/index/{{ blogList.next_page_number }}">向后 <span
+									aria-hidden="true">&rarr;</span></a></li>
+						{% else %}
+							<li class="next disabled"><a>向后 <span aria-hidden="true">&rarr;</span></a></li>
+						{% endif %}
+					</ul>
+				</nav>
+			</div>
+		{% else %}
+			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
+				<h1>主人很懒,什么都没有留下</h1>
+				<div style="width:700px;height: 394px;background-image: url({% static 'img/corn.png' %})"></div>
+			</div>
+		{% endif %}
+	</div>
+	<script type="text/javascript">
+	</script>
+{% endblock %}

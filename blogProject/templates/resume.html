@@ -1,0 +1,105 @@
+{% extends 'base_head.html' %}
+
+{% load static from staticfiles %}
+{% block style %}
+	p{
+	text-align:justify;
+	font-size:large;
+	margin-left:10px;
+
+	}
+	.resume>li{
+	font-size:larger;
+	margin:10px;
+	margin-left:3px;
+	text-align:justify;
+	list-style-type:none;
+	}
+	h3,h4{
+	margin-left:15px
+	}
+	.li-head{
+		font-size:8px;
+	}
+
+{% endblock %}
+{% block main %}
+	<div class="col-lg-8 col-lg-offset-2 col-md-12 col-sm-12" style="padding: 0px">
+		<p class="page-header col-lg-12  col-md-12 col-sm-12"
+		   style="border-bottom:2px dashed #DCDCDC;font-size:x-large">个人信息</p>
+		<ul class="resume col-lg-12  col-md-12 col-sm-12" style="">
+			<li>罗天豪/男/1995</li>
+			<li>湖北文理学院/物联网工程专业/本科</li>
+			<li>技术博客:<a href="http://blog.csdn.net/qq_41673534">http://blog.csdn.net/qq_41673534</a></li>
+		</ul>
+		<p class="page-header col-lg-12  col-md-12 col-sm-12"
+		   style="border-bottom:2px dashed #DCDCDC;font-size:x-large">联系方式</p>
+		<ul class="resume col-lg-12  col-md-12 col-sm-12" style="">
+			<li>手机：18934606517</li>
+			<li>Email：850230720@qq.com</li>
+			<li>QQ：850230720</li>
+		</ul>
+		<p class="page-header col-lg-12  col-md-12 col-sm-12"
+		   style="border-bottom:2px dashed #DCDCDC;font-size:x-large">工作经历</p>
+		<h4 style=""><strong>南京中软国际(2016/6~2016/12)</strong></h4>
+		<h4>江苏省金税三期运维(2016/6~2016/12)</h4>
+		<ul class="resume col-lg-12  col-md-12 col-sm-12" style="color: #7c7c7c;">
+			<li>1.使用nagios监控系统包括系统内存，磁盘空间，cpu使用率，业务表变空间大小，ogg是否正常，数据库是否正，项目是否正常等。</li>
+			<li>2.oracle数据库数据操作，配合业务运维以及开发对数据库进行数据更新修改。</li>
+			<li>3.解决简单ogg基础问题。</li>
+			<li>4.分析解决业务问题，包括慢查询简单sql优化，项目上线问题，业务逻辑问题等。</li>
+			<li>5.定期晨检，巡检，做结果汇报。</li>
+			<li>6.简单shell脚本开发。</li>
+			<li>7.项目版本更新发布。</li>
+			<li>8.利用loadrunner压力测试。</li>
+		</ul>
+
+		<h4 style="">江苏省网上办税厅运维(2016/9~2016/12)</h4>
+		<ul class="resume col-lg-12  col-md-12 col-sm-12" style="color: #7c7c7c;">
+
+			<li>1.使用nagios监控系统包括系统内存，磁盘空间，cpu使用率，业务表变空间大小，ogg是否正常，数据库是否正，项目是否正常等。</li>
+			<li>2.oracle数据库数据操作，配合业务运维以及开发对数据库进行数据更新修改。</li>
+			<li>3.解决简单ogg基础问题。</li>
+			<li>4.分析解决业务问题，包括慢查询简单sql优化，项目上线问题，业务逻辑问题等。</li>
+			<li>5.定期晨检，巡检，做结果汇报。</li>
+			<li>6.简单shell脚本开发。</li>
+			<li>7.项目版本更新发布。</li>
+			<li>8.利用loadrunner压力测试。</li>
+		</ul>
+		<h4 style=""><strong>在校期间(2016/3~2016/7)</strong></h4>
+		<h4>大学生程序设计'ti'杯，智能家居项目(2016/3~2016/7)</h4>
+		<ul class="resume col-lg-12  col-md-12 col-sm-12" style="color: #7c7c7c;">
+			<li>项目描述：主要实现通过zigbee传感器采集室内实时的数据，包括：温度，湿度，降雨，火情等实时数据，通过日常用户的使用习惯，
+				设置阀值，实现自动调整电器，并将数据通wifi模块传给前台页面，进行人性化显示，并且可通过页面手动操控室内电器的状态和阀值设定</li>
+			<li>项目职责：前台页面的设计，后台数据的简单处理</li>
+			<li>用到的技术：java/Echarts/JavaScript/jQuery/CSS</li>
+		</ul>
+		<h4 style="font-size: 18px"><strong>担任班长，计算机协会会长(2013/9~2016/6)</strong></h4>
+		<ul class="resume col-lg-12  col-md-12 col-sm-12" style="color: #7c7c7c;">
+			<li>在担任会长期间，组织了多次活动：编程设计大赛，lol比赛，义务维修等。
+				在工作中，能够独当一面，可以很好的与领导进行沟通，在自己能力范围内，一丝不苟的完成任务。在任期间，协会获得校级优秀社团。</li>
+			<li>在担任班长期间，协助班主任完成班级管理任务，组织学校/学院各项活动</li>
+			<li>在校期间自我评价：吃苦耐劳，认真负责，有上进心</li>
+		</ul>
+		<p class="page-header col-lg-12  col-md-12 col-sm-12"
+		   style="border-bottom:2px dashed #DCDCDC;font-size:x-large">技能清单</p>
+		<ul class="resume col-lg-12  col-md-12 col-sm-12" style="">
+			<li><strong>以下均为我熟练使用的技能</strong></li>
+			<li>语言：python/Java</li>
+			<li>框架：django/tornado</li>
+			<li>前端：Bootstrap /jQuery / JavaScript /CSS / Echarts 图表</li>
+			<li>测试：loadrunner</li>
+			<li>数据库：MySQL / SQL Server/ Oracle/mongodb</li>
+			<li>版本管理：Git</li>
+			<li>缓存：Redis / Memcached</li>
+			<li>脚本：Shell</li>
+			<li>系统：Linux/ Windows</li>
+			<li><strong>以下均为我了解的技能</strong></li>
+			<li>语言：c</li>
+		</ul>
+		<p class="page-header col-lg-12  col-md-12 col-sm-12"
+		   style="border-bottom:2px dashed #DCDCDC;font-size:x-large">致谢</p>
+		<p>感谢您花时间阅读我的简历，期待能有机会和您共事。</p>
+	</div>
+
+{% endblock %}
